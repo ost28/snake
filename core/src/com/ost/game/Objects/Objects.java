@@ -23,8 +23,8 @@ public abstract class Objects {
      */
     public Objects(int x, int y){
         position = new Vector2(x,y);
-        image=new Texture("data/obj.png");
-        form = new Rectangle(x+2,y+2,image.getWidth()-4,image.getHeight()-4);
+        //image=new Texture("data/obj.png");
+        form = new Rectangle(x+2,y+2,24-4,24-4);
     }
     /** Возвращает позицию объекта
      * @return позиция объекта
@@ -32,6 +32,11 @@ public abstract class Objects {
     public Vector2 getPosition(){
         return this.position;
     } 
+    
+    public void setPosition(int x, int y){
+        this.position.x = x;
+        this.position.y = y;
+    }
     /** Возвращает изображение объекта
      * @return изображение объекта
      */

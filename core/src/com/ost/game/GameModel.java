@@ -24,7 +24,7 @@ public class GameModel extends ApplicationAdapter implements IGameModel{
     /** Контейнер для объектов на экране */
     private SpriteBatch batch;
     /** Игровое поле */
-    private Field field;
+    public Field field;
     public static int eat = 0;
     public static int score = 0;
     /** Время с прошлого нажатия паузы */

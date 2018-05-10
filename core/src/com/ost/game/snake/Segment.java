@@ -48,12 +48,12 @@ public class Segment {
      * @param nav - направление сегмента
     */
     public Segment(int x, int y, Navigate nav){
-        image = new Texture("data/snake.png");
+        //image = new Texture("data/snake.png");
         position = new Vector2(x,y);
         nextPos = null;
         this.nav = nav;
         nextNav = nav;
-        form = new Rectangle(x+4,y+4,image.getWidth()-8,image.getHeight()-8);
+        //form = new Rectangle(x+4,y+4,image.getWidth()-8,image.getHeight()-8);
         tail=null;
     }
     /** Обновление сегмента
@@ -134,16 +134,16 @@ public class Segment {
         //Для каждого направления вырастить хвост
         switch (nav){
             case UP:
-                tail=new Segment((int)position.x,(int)position.y-image.getWidth()/2,Navigate.UP);
+                tail=new Segment((int)position.x,(int)position.y-24/2,Navigate.UP);
                 break;
             case DOWN:
-                tail=new Segment((int)position.x,(int)position.y+image.getWidth()/2,Navigate.DOWN);
+                tail=new Segment((int)position.x,(int)position.y+24/2,Navigate.DOWN);
                 break;
             case RIGHT:
-                tail=new Segment((int)position.x-image.getWidth()/2,(int)position.y,Navigate.RIGHT);
+                tail=new Segment((int)position.x-24/2,(int)position.y,Navigate.RIGHT);
                 break;
             case LEFT:
-                tail=new Segment((int)position.x+image.getWidth()/2,(int)position.y,Navigate.LEFT);
+                tail=new Segment((int)position.x+24/2,(int)position.y,Navigate.LEFT);
                 break;
         }
     }

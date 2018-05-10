@@ -23,7 +23,7 @@ public class Food extends Objects{
     public Food(int x, int y, Effect effect) {
         super(x, y);
         this.effect = effect;
-        if(effect instanceof SpeedUpEffect)
+        /*if(effect instanceof SpeedUpEffect)
             this.image = new Texture("data/speedupfood.png");
         else if(effect instanceof SpeedDownEffect)
             this.image = new Texture("data/speeddownfood.png");
@@ -32,7 +32,7 @@ public class Food extends Objects{
         else if(effect instanceof TailDownEffect)
             this.image = new Texture("data/taildownfood.png");
         else if(effect instanceof Flashing)
-            this.image = new Texture("data/taildownfood.png");
+            this.image = new Texture("data/taildownfood.png");*/
     }
     
     public void activate(){

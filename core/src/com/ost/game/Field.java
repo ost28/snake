@@ -42,7 +42,7 @@ public class Field implements IField{
     /** Фон */
     public Texture background;
     /** Змейка */
-    private Snake snake;
+    public Snake snake;
     /** Блоки */
     public ArrayList<Block> blocks;
     /** Еда */
@@ -65,7 +65,7 @@ public class Field implements IField{
     }
     
     private void generateField(){
-        generateBlocks();
+        //generateBlocks();
         generateAreas();
         generateFood();
     }
@@ -134,6 +134,7 @@ public class Field implements IField{
         food.add(new Food(24,24,new Flashing(snake,2000)));
         flash();
     }
+
     /** Генерирует позицию на поле
      * @return - свободная позиция
      */

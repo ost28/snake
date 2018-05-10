@@ -8,6 +8,7 @@ package com.ost.game.modules;
 import com.ost.game.GameModel;
 import com.ost.game.Objects.Food;
 import com.ost.game.snake.Segment.Navigate;
+import com.ost.game.snake.Snake;
 import com.ost.modules.Module;
 import java.util.Random;
 
@@ -91,6 +92,23 @@ public class ModuleGame implements Module{
             else if(gm.checkNavigate(Navigate.RIGHT) && gm.getSnakeNavigate()!=Navigate.LEFT)
                 gm.setNavigate(Navigate.RIGHT);
         }
+    }
+    
+    public Navigate getNavigate(Snake s, Food f){
+        if (Math.abs(f.getPosition().x - s.getHead().getPosition().x) < 23) {
+            if (f.getPosition().y - s.getHead().getPosition().y > 0) {
+                return Navigate.UP;
+            } else if (f.getPosition().y - s.getHead().getPosition().y < 0) {
+                return Navigate.DOWN;
+            }
+        } else if (Math.abs(f.getPosition().y - s.getHead().getPosition().y) < 23) {
+            if (f.getPosition().x - s.getHead().getPosition().x > 0) {
+                return Navigate.RIGHT;
+            } else if (f.getPosition().x - s.getHead().getPosition().x < 0) {
+                return Navigate.LEFT;
+            }
+        }
+        return s.getNavigate();
     }
     
     @Override
