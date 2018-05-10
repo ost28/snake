@@ -49,9 +49,17 @@ public class ModuleGameTest {
         
     }
 
-    @org.junit.Test
-    public void testReturn3(){
-        System.out.println("return3");
-        assertEquals(0, 1);
+    @org.junit.Test(expected = NullPointerException.class)
+    public void testLoadNullModel(){
+        System.out.println("load: null gm");
+        ModuleGame mg = new ModuleGame();
+        mg.load(null,mg);
+    }
+    
+    @org.junit.Test(expected = NullPointerException.class)
+    public void testLoadNullModule(){
+        System.out.println("load: null modul");
+        ModuleGame mg = new ModuleGame();
+        mg.load(null,mg);
     }
 }

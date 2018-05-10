@@ -21,6 +21,9 @@ public class ModuleGame implements Module{
     
     @Override
     public void load(GameModel gm, Module batch) {
+        if(gm == null || batch==null){
+            throw new NullPointerException(); 
+        }
         this.gm = gm;
         this.gm.setModule(batch);
     }
@@ -88,14 +91,6 @@ public class ModuleGame implements Module{
             else if(gm.checkNavigate(Navigate.RIGHT) && gm.getSnakeNavigate()!=Navigate.LEFT)
                 gm.setNavigate(Navigate.RIGHT);
         }
-    }
-
-    public int return3(){
-        return 3;
-    }
-    
-    public int return2(){
-        return 0;
     }
     
     @Override

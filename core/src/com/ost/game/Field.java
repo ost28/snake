@@ -56,12 +56,12 @@ public class Field implements IField{
         blocks = new ArrayList<Block>();
         areas = new ArrayList<Areas>();
         food = new ArrayList<Food>();
-        generateSnake(1,6);
+        generateSnake(WIDTH/2,HEIGHT/2,1,6);
         generateField();
     }
     
-    private void generateSnake(int velocity,int length){
-        snake = new Snake(new Head(WIDTH/2,HEIGHT/2,Navigate.RIGHT),velocity,length);
+    private void generateSnake(int posX, int posY,int velocity,int length){
+        snake = new Snake(new Head(posX,posY,Navigate.RIGHT),velocity,length);
     }
     
     private void generateField(){
