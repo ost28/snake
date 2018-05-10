@@ -52,6 +52,6 @@ public class ModuleGameTest {
     @org.junit.Test
     public void testReturn3(){
         System.out.println("return3");
-        assertEqual0(0, 1);
+        assertEquals(0, 1);
     }
 }
