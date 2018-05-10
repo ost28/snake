@@ -102,7 +102,7 @@ public class ModuleGameTest {
     
     @org.junit.Test
     public void testGetNavigateLeft(){
-        System.out.println("testGetNavigate: Left");
+        System.out.println("testGetNavigate: LEFT");
         ModuleGame mg = new ModuleGame();
         Head h = new Head(Field.WIDTH/2,Field.HEIGHT/2,Navigate.RIGHT);
         Snake s = new Snake(h,1,6);
