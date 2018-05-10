@@ -48,44 +48,10 @@ public class ModuleGameTest {
     public void testCheckAndSetNavigate() {
         
     }
-    
-    /**
-     * Test of load method, of class ModuleGame.
-     */
-    @org.junit.Test
-    public void testLoad() {
-        System.out.println("load");
-        //GameModel gm = null;
-        //Module batch = null;
-        //ModuleGame instance = new ModuleGame();
-        //instance.load(gm, batch);
-        // TODO review the generated test code and remove the default call to fail.
-        assertEquals(0, 0);
-    }
 
-    /**
-     * Test of run method, of class ModuleGame.
-     */
     @org.junit.Test
-    public void testRun() {
-        System.out.println("run");
-        //ModuleGame instance = new ModuleGame();
-        //int expResult = 0;
-        //int result = instance.run();
-        assertEquals(0, 0);
-        // TODO review the generated test code and remove the default call to fail.
-    }
-
-    /**
-     * Test of unload method, of class ModuleGame.
-     */
-    @org.junit.Test
-    public void testUnload() {
-        System.out.println("unload");
-        //ModuleGame instance = new ModuleGame();
-        //instance.unload();
-        // TODO review the generated test code and remove the default call to fail.
+    public void testReturn3(){
+        System.out.println("return3");
         assertEquals(0, 0);
     }
-    
 }
